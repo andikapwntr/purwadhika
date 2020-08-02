@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Kalkulator Sederhana</h1>
+
+    <form id="form">
+
+        Masukkan angka 1 : <input type="number">
+        <br><br>
+        Masukan angka 2 : <input type="number">
+    </form>
+
+        <br>
+
+        <button onclick="Kali()">Kali x</button>
+        <button onclick="Bagi()">Bagi :</button>
+        <button onclick="Tambah()">Tambah +</button>
+        <button onclick="Kurang()">Kurang -</button>
+        <button onclick="Modulus()">Modulus %</button>
+        <button onclick="Pangkat()">Pangkat</button>
+
+        <p id="output"></p>
+        
+        <script>
+
+            function Kali(){
+                var angkaKali1 = document.getElementById("form").elements[0].value;
+
+                var angkaKali2 = document.getElementById("form").elements[1].value;
+
+                var hasilKali = angkaKali1 * angkaKali2;
+
+                document.getElementById("output").innerHTML = angkaKali1 + "*" + angkaKali2 + "=" + hasilKali;
+            }
+
+            function Bagi(){
+                var angkaBagi1 = document.getElementById("form").elements[0].value;
+
+                var angkaBagi2 = document.getElementById("form").elements[1].value;
+
+                var hasilBagi = angkaBagi1 / angkaBagi2;
+
+                document.getElementById("output").innerHTML = angkaBagi1 + "/" + angkaBagi2 + "=" + hasilBagi;
+            }
+
+            function Tambah(){
+                var angkaTambah1 = parseInt(document.getElementById("form").elements[0].value);
+
+                var angkaTambah2 = parseInt(document.getElementById("form").elements[1].value);
+
+                var hasilTambah = angkaTambah1 + angkaTambah2;
+
+                document.getElementById("output").innerHTML = angkaTambah1 + "+" + angkaTambah2 + "=" + hasilTambah;
+            }
+
+            function Kurang(){
+                var angkaKurang1 = document.getElementById("form").elements[0].value;
+
+                var angkaKurang2 = document.getElementById("form").elements[1].value;
+
+                var hasilKurang = angkaKurang1 - angkaKurang2;
+
+                document.getElementById("output").innerHTML = angkaKurang1 + "-" + angkaKurang2 + "=" + hasilKurang;
+            }
+
+            function Modulus(){
+                var angkaModulus1 = document.getElementById("form").elements[0].value;
+
+                var angkaModulus2 = document.getElementById("form").elements[1].value;
+
+                var hasilModulus = angkaModulus1 % angkaModulus2;
+
+                document.getElementById("output").innerHTML = angkaModulus1 + "%" + angkaModulus2 + "=" + hasilModulus;
+            }
+
+            function Pangkat(){
+                var angkaPangkat1 = document.getElementById("form").elements[0].value;
+
+                var angkaPangkat2 = document.getElementById("form").elements[1].value;
+
+                var hasilPangkat =  Math.pow(angkaPangkat1,angkaPangkat2);
+
+                document.getElementById("output").innerHTML = angkaPangkat1 + "<sup>" + angkaPangkat2 +"</sup>" + "=" + hasilPangkat;
+            }
+
+
+        </script>
+
+
+
+    
+</body>
+</html>
